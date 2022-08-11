@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número mágico</title>
+</head>
+<body>
+<center>
+<b>JOGO DO NÚMERO MÁGICO</b><br> <br>
+Modo de Jogo: <input type="text" size="8" id="inpModo" placeholder="1- PvP/ 2- PvE"><br><br>
+Dificuldade: <input type="text" size="18" id="inpDificuldade" placeholder="1- Fácil/ 2- Médio/ 3- Difícil">
+<button onclick="comecar()">Começar</button><br><br>
+<div id="divFim"></div>
+</center>
+<script>
+
+function comecar()
+{ 
+
+    var n = Number 
+    var nome1, nome2
+    var tentativa, tentativa2
+    var cont = 0
+    var cont2 = 0
+    var numero, numero2
+    var modo = document.getElementById("inpModo").value
+    var dificuldade = document.getElementById("inpDificuldade").value
+
+    if(modo == 2 && dificuldade == 1)
+    {
+        numero = Math.floor(Math.random() * 50) +1
+        do
+        {
+            cont++
+            tentativa = parseInt(prompt(cont + "º tentativa \nChute um número de 0 a 50: "))
+            n = tentativa 
+            //console.log(numero)
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa < 0 || tentativa > 50)
+            {
+                alert("Escolha um de 0 e 50")
+                cont--
+            }else
+            if(tentativa > numero)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa < numero)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+            
+
+        }while(tentativa != numero)
+
+        document.getElementById("divFim").innerHTML = "Número escolhido: " + numero + 
+        "<br>Tentativas: " + cont
+    }
+
+    if(modo == 2 && dificuldade == 2)
+    {
+        numero = Math.floor(Math.random() * 250) +1
+        do
+        {
+            cont++
+            tentativa = parseInt(prompt(cont + "º tentativa \nChute um número de 0 a 250: "))
+            n = tentativa 
+            //console.log(numero)
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa < 0 || tentativa > 250)
+            {
+                alert("Escolha um de 0 e 250")
+                cont--
+            }else
+            if(tentativa > numero)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa < numero)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+            
+
+        }while(tentativa != numero)
+
+        document.getElementById("divFim").innerHTML = "Número escolhido: " + numero + 
+        "<br>Tentativas: " + cont
+    }
+    if(modo == 2 && dificuldade == 3)
+    {
+        numero = Math.floor(Math.random() * 500) +1
+        do
+        {
+            cont++
+            tentativa = parseInt(prompt(cont + "º tentativa \nChute um número de 0 a 500: "))
+            n = tentativa 
+            //console.log(numero)
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa < 0 || tentativa > 500)
+            {
+                alert("Escolha um de 0 e 500")
+                cont--
+            }else
+            if(tentativa > numero)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa < numero)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+            
+
+        }while(tentativa != numero)
+
+        document.getElementById("divFim").innerHTML = "Número escolhido: " + numero + 
+        "<br>Tentativas: " + cont
+    }
+    if(modo == 1 && dificuldade == 1)
+    {
+        nome1 = prompt("Nome do jogador 1: ")
+        nome2 = prompt("Nome do Jogador 2: ")
+        numero = Math.floor(Math.random() * 50) +1
+
+        do
+        {           
+            cont++
+            tentativa = parseInt(prompt("Jogador 1" + "\n" + cont + "º Tentativa \nChute um número de 0 a 50: "))
+            n = tentativa 
+            //console.log(numero)
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa < 0 || tentativa > 50)
+            {
+                alert("Escolha um de 0 e 50")
+                cont--
+            }else
+            if(tentativa > numero)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa < numero)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+
+        }while(tentativa != numero)
+
+        numero2 = Math.floor(Math.random() * 50) +1
+
+        do
+        {   
+            cont2++
+            tentativa2 = parseInt(prompt("Jogador 2" + "\n" + cont2 + "º Tentativa \nChute um número de 0 a 50: "))
+            n = tentativa 
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa2 < 0 || tentativa2 > 50)
+            {
+                alert("Escolha um de 0 e 50")
+                cont2--
+            }else
+            if(tentativa2 > numero2)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa2 < numero2)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+            
+
+        }while(tentativa2 != numero2)
+
+        document.getElementById("divFim").innerHTML = "Números escolhidos: " + numero + " e " + numero2 + "<br>Tentativas de " + nome1 + ": " + cont + 
+        "<br>Tentativas de " + nome2 + ": " + cont2
+
+    }
+    if(modo == 1 && dificuldade == 2)
+    {
+        nome1 = prompt("Nome do jogador 1: ")
+        nome2 = prompt("Nome do Jogador 2: ")
+        numero = Math.floor(Math.random() * 250) +1
+
+        do
+        {           
+            cont++
+            tentativa = parseInt(prompt("Jogador 1" + "\n" + cont + "º Tentativa \nChute um número de 0 a 250: "))
+            n = tentativa 
+            //console.log(numero)
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa < 0 || tentativa > 250)
+            {
+                alert("Escolha um de 0 e 250")
+                cont--
+            }else
+            if(tentativa > numero)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa < numero)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+
+        }while(tentativa != numero)
+
+        numero2 = Math.floor(Math.random() * 250) +1
+
+        do
+        {   
+            cont2++
+            tentativa2 = parseInt(prompt("Jogador 2" + "\n" + cont2 + "º Tentativa \nChute um número de 0 a 250: "))
+            n = tentativa
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa2 < 0 || tentativa2 > 250)
+            {
+                alert("Escolha um de 0 e 250")
+                cont2--
+            }else
+            if(tentativa2 > numero2)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa2 < numero2)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+            
+
+        }while(tentativa2 != numero2)
+
+        document.getElementById("divFim").innerHTML = "Números escolhidos: " + numero + " e " + numero2 + "<br>Tentativas de " + nome1 + ": " + cont + 
+        "<br>Tentativas de " + nome2 + ": " + cont2
+    }
+
+    if(modo == 1 && dificuldade == 3)
+    {
+        nome1 = prompt("Nome do jogador 1: ")
+        nome2 = prompt("Nome do Jogador 2: ")
+        numero = Math.floor(Math.random() * 500) +1
+
+        do
+        {           
+            cont++
+            tentativa = parseInt(prompt("Jogador 1" + "\n" + cont + "º Tentativa \nChute um número de 0 a 500: "))
+            n = tentativa 
+            //console.log(numero)
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa < 0 || tentativa > 500)
+            {
+                alert("Escolha um de 0 e 500")
+                cont--
+            }else
+            if(tentativa > numero)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa < numero)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+
+        }while(tentativa != numero)
+
+        numero2 = Math.floor(Math.random() * 500) +1
+
+        do
+        {   
+            cont2++
+            tentativa2 = parseInt(prompt("Jogador 2" + "\n" + cont2 + "º Tentativa \nChute um número de 0 a 500: "))
+            n = tentativa 
+    
+            if(tentativa != n)
+            {
+                alert("Escolha um número")
+                cont--
+            }else
+            if(tentativa2 < 0 || tentativa2 > 500)
+            {
+                alert("Escolha um de 0 e 500")
+                cont2--
+            }else
+            if(tentativa2 > numero2)
+            {
+                alert("O número é menor") 
+            }else
+            if(tentativa2 < numero2)
+            {
+                alert("O número é maior")
+            }
+            else
+            {
+                alert("Achou!!")
+            }
+            
+
+        }while(tentativa2 != numero2)
+
+        document.getElementById("divFim").innerHTML = "Números escolhidos: " + numero + " e " + numero2 + "<br>Tentativas de " + nome1 + ": " + cont + 
+        "<br>Tentativas de " + nome2 + ": " + cont2
+    }
+}
+
+</script>
+</body>
+</html>
